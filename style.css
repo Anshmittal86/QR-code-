@@ -2,14 +2,14 @@
 
 body{
     overflow: hidden;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(212, 45%, 89%);
 }
 main{
     display: flex;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(212, 45%, 89%);
 }
 
 .qr_container{
