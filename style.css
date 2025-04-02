@@ -1,56 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Ubuntu:wght@300&display=swap');
+:root {
+  --clr-white: hsl(0, 0%, 100%);
 
-body{
-    overflow: hidden;
-    background-color: hsl(212, 45%, 89%);
-}
-main{
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsl(212, 45%, 89%);
-}
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
 
-.qr_container{
-    width: 90vw;
-    height: 85vh;
-    margin: auto;
-    background-color: hsl(212, 45%, 89%);
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px 0 rgb(174, 174, 174);
+  --fs-base: 1.5rem;
+  --fs-lg: 2.4rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+/* CSS Resets Styling  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
 }
 
-.qr_inner_container{
-    margin: 0 auto;
-    width: 250px;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.8rem;
-    text-align: center;
+html {
+  font-size: 62.5%;
 }
 
-img{
-    width: 250px;
-    border-radius: 0.6rem;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.qr_heading{
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-.qr_description{
-    font-size: 18px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
+/* Main CSS Styling  */
+
+body {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
 }
 
-@media only screen and (max-width: 375px){
-    .qr_container{
-        width: 100%;
-        height: 100vh;
-    }
+h2 {
+  font-size: var(--fs-lg);
+  color: var(--slate-900);
+  font-weight: var(--fw-bold);
+  margin-block: 2rem;
+}
+
+main {
+  min-height: 100dvh;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--slate-300);
+}
+
+.qr_container {
+  width: min(95%, 320px);
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  text-align: center;
+  background-color: var(--clr-white);
+  box-shadow: 10px 10px 48px -22px rgba(0, 0, 0, 0.75);
+}
+
+.qr_container > img {
+  border-radius: 1rem;
+}
+
+.qr_description {
+  color: var(--slate-500);
+  margin-block-end: 2rem;
+}
+
+@media (max-width: 375px) {
+  .qr_heading {
+    font-size: 1.6rem;
+  }
+
+  .qr_description {
+    font-size: 1.4rem;
+  }
 }
